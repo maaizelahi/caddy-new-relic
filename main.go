@@ -79,10 +79,8 @@ func (Newrelic) CaddyModule() caddy.ModuleInfo {
 // Provision implements caddy.Provisioner.
 func (nr *Newrelic) Provision(ctx caddy.Context) error {
 	app, nrErr = newrelic.NewApplication(
-		newrelic.ConfigAppName("maaiz-caddy-module-service"),
         // Fill in your New Relic license key
-        newrelic.ConfigLicense("c6547b52947fb5d2adcd712deccda1339028NRAL"),
-		// newrelic.ConfigFromEnvironment(),
+		newrelic.ConfigFromEnvironment(),
 		newrelic.ConfigDebugLogger(os.Stdout),
 		newrelic.ConfigAppLogForwardingEnabled(true),
 		newrelic.ConfigCodeLevelMetricsEnabled(true),
