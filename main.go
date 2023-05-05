@@ -99,7 +99,7 @@ func (nr *Newrelic) Provision(ctx caddy.Context) error {
     }
 	// http.HandleFunc(newrelic.WrapHandleFunc(app, "/", dummyHandler))
 
-	http.HandleFunc("/", dummyHandler)
+	// http.HandleFunc("/", dummyHandler)
     // Now use the app to instrument everything!
 	return nrErr
 }
