@@ -97,9 +97,6 @@ func (nr *Newrelic) Provision(ctx caddy.Context) error {
 	if app != nil {
         fmt.Println("Maaiz app initialized", app)
     }
-	// http.HandleFunc(newrelic.WrapHandleFunc(app, "/", dummyHandler))
-
-	// http.HandleFunc("/", dummyHandler)
     // Now use the app to instrument everything!
 	return nrErr
 }
